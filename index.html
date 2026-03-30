@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | EcoLogic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <button class="icon-btn" aria-label="Inicio">Login</button>
+          <h1 class="topbar__title">EcoLogic</h1>
+        <div class="menu-wrap">
+          <button id="menu-toggle" class="icon-btn" aria-label="Menu">Menu</button>
+          <div id="menu-panel" class="menu-panel">
+            <div id="menu-user" class="menu-user"></div>
+            <button id="menu-login" class="menu-item">Entrar</button>
+            <button id="menu-logout" class="menu-item">Sair</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="screen">
+        <section class="hero">
+          <h1>Entre para reportar e coletar em Curitiba.</h1>
+          <p class="meta">Acesso demo: Coletor/Reportador 1234</p>
+        </section>
+
+        <section class="card">
+          <h3>Acesso de usuario</h3>
+          <form id="login-form" autocomplete="off">
+            <label>
+              E-mail/Usuario
+              <input type="text" name="identifier" required />
+            </label>
+            <label>
+              Senha
+              <input type="password" name="password" required />
+            </label>
+            <button class="btn" type="submit">Entrar</button>
+          </form>
+        </section>
+
+        <section class="actions">
+          <a class="btn-link btn--ghost" href="./cadastro.html">Criar nova conta</a>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script src="./js/core.js"></script>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

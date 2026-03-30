@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed | EcoLogic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <button class="icon-btn" data-back aria-label="Voltar"><</button>
+        <h1 class="topbar__title">Feed de reportes</h1>
+        <div class="menu-wrap">
+          <button id="menu-toggle" class="icon-btn" aria-label="Menu">Menu</button>
+          <div id="menu-panel" class="menu-panel">
+            <div id="menu-user" class="menu-user"></div>
+            <button id="menu-login" class="menu-item">Entrar</button>
+            <button id="menu-logout" class="menu-item">Sair</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="screen">
+        <section id="posts-list" class="actions"></section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script src="./js/core.js"></script>
+    <script src="./js/feed.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reportar | EcoLogic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <button class="icon-btn" data-back aria-label="Voltar"><</button>
+        <h1 id="report-screen-title" class="topbar__title">Novo reporte</h1>
+        <div class="menu-wrap">
+          <button id="menu-toggle" class="icon-btn" aria-label="Menu">Menu</button>
+          <div id="menu-panel" class="menu-panel">
+            <div id="menu-user" class="menu-user"></div>
+            <button id="menu-login" class="menu-item">Entrar</button>
+            <button id="menu-logout" class="menu-item">Sair</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="screen">
+        <section class="card">
+          <h3>Local do lixo em Curitiba</h3>
+          <div id="map"></div>
+          <div class="location-box">
+            <p id="selected-location-label" class="meta">Nenhum ponto selecionado</p>
+            <button id="locate-btn" class="btn btn--alt" type="button">Usar minha localizacao</button>
+            <button id="clear-location-btn" class="btn btn--ghost" type="button">Limpar ponto</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Detalhes do reporte</h3>
+          <form id="report-form" autocomplete="off">
+            <label>
+              Titulo
+              <input type="text" name="title" required />
+            </label>
+            <label>
+              Descricao
+              <textarea name="description" rows="4" required></textarea>
+            </label>
+            <label>
+              Tipo de material
+              <select name="wasteType" required>
+                <option value="">Selecione</option>
+                <option value="papelao">Papelao</option>
+                <option value="reciclavel">Reciclavel misto</option>
+                <option value="entulho">Entulho leve</option>
+                <option value="organico">Lixo organico</option>
+              </select>
+            </label>
+            <label>
+              Imagem
+              <input type="file" name="image" accept="image/*" />
+            </label>
+            <button id="report-submit-btn" class="btn" type="submit">Publicar reporte</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./js/core.js"></script>
+    <script src="./js/reportar.js"></script>
+  </body>
+</html>
+
